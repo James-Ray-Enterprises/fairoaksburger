@@ -13,7 +13,7 @@ export default {
   env: {
     url:
       process.env.NODE_ENV === 'production'
-        ? process.env.URL || 'http://createADotEnvFileAndSetURL'
+        ? process.env.URL || 'http://fairoaksburger.com'
         : 'http://localhost:3000',
     lang: SITE_INFO.sitelang || 'en-US'
   },

@@ -1,8 +1,8 @@
 {
-  "name": "ntn-boilerplate",
-  "version": "2.1.2",
-  "description": "Nuxt-Tailwind-NetlifyCMS boilerplate",
-  "author": "Sven Parker <hello+dev@svenparker.com> (https://svenparker.com)",
+  "name": "fairoaksburger",
+  "version": "2.0.0",
+  "description": "Fair Oaks Burger",
+  "author": "James Ray <james@ray.enterprises> (https://james.engineer)",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Knogobert/ntn-boilerplate#readme"
+    "url": "https://github.com/James-Ray-Enterprises/fairoaksburger"
   },
   "license": "MIT",
   "dependencies": {
