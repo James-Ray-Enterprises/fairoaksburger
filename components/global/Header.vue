@@ -1,22 +1,86 @@
 <template>
-  <nav class="scrim-bg fixed z-40 top-0 inset-x-0 pt-3 px-3" aria-label="Main Menu">
-    <ul class="flex">
-      <li class="flex-1">
-        <nuxt-link class="btn block" to="/">Home</nuxt-link>
-      </li>
-      <li class="flex-1 ml-2">
-        <nuxt-link class="btn block" to="/blog">Blog</nuxt-link>
-      </li>
-      <li class="flex-1 ml-2">
-        <nuxt-link class="btn block" to="/projects">Projects</nuxt-link>
-      </li>
-    </ul>
-  </nav>
+  <header class="bg-indigo-600 w-full">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
+      <div class="w-full py-6 flex items-center justify-between border-b border-indigo-500 lg:border-none">
+        <div class="flex items-center">
+          <a href="#">
+            <span class="sr-only">Workflow</span>
+            <img class="h-10 w-auto" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=white" alt="" />
+          </a>
+          <div class="hidden ml-10 space-x-8 lg:block">
+            <a
+              v-for="link in navigation"
+              :key="link.name"
+              :href="link.href"
+              class="text-base font-medium text-white hover:text-indigo-50"
+            >
+              {{ link.name }}
+            </a>
+          </div>
+        </div>
+        <div class="ml-10 space-x-4">
+          <a
+            href="#"
+            class="
+              inline-block
+              bg-indigo-500
+              py-2
+              px-4
+              border border-transparent
+              rounded-md
+              text-base
+              font-medium
+              text-white
+              hover:bg-opacity-75
+            "
+            >Sign in</a
+          >
+          <a
+            href="#"
+            class="
+              inline-block
+              bg-white
+              py-2
+              px-4
+              border border-transparent
+              rounded-md
+              text-base
+              font-medium
+              text-indigo-600
+              hover:bg-indigo-50
+            "
+            >Sign up</a
+          >
+        </div>
+      </div>
+      <div class="py-4 flex flex-wrap justify-center space-x-6 lg:hidden">
+        <a
+          v-for="link in navigation"
+          :key="link.name"
+          :href="link.href"
+          class="text-base font-medium text-white hover:text-indigo-50"
+        >
+          {{ link.name }}
+        </a>
+      </div>
+    </nav>
+  </header>
 </template>
 
 <script>
+const navigation = [
+  { name: 'Solutions', href: '#' },
+  { name: 'Pricing', href: '#' },
+  { name: 'Docs', href: '#' },
+  { name: 'Company', href: '#' },
+]
 export default {
-  name: 'Header'
+  name: 'Header',
+  data() {
+    return {
+      navigation,
+    }
+  },
 }
 </script>
 
@@ -55,11 +119,19 @@ export default {
 
 /* Need two because of smoother switching between color modes */
 @keyframes fadeIn1 {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @keyframes fadeIn2 {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 </style>
